@@ -11,7 +11,8 @@ attr_writer :speaks
   end
 
   def take_fish(river)
-    @stomach << river
+    fish = river.lose_fish
+    stomach.push(fish)
   end
 
   def check_food

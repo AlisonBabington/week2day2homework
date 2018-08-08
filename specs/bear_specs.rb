@@ -31,8 +31,7 @@ class BearTest < MiniTest::Test
 
   def test_bear_take_fish_from_river_add_to
     fish1 = Fish.new("Salmon")
-    @bear1.take_fish(@river1.fish[0])
-    @river1.lose_fish(@river1.fish[0])
+    @bear1.take_fish(@river1)
     assert_equal(1, @bear1.stomach.count)
     assert_equal(2, @river1.fish.count)
   end

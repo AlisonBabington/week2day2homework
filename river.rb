@@ -8,12 +8,13 @@ class River
     @fish = fish || []
   end
 
-  def lose_fish(fish_eaten)
-    @fish.delete(fish_eaten)
+  def lose_fish
+    return @fish.pop if @fish.count > 0
+    return Fish.new("Magic Fish")
   end
 
   def count_fish
-    @fish.count_fish
+    @fish.count
   end
 
 
